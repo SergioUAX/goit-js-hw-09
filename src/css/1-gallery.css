@@ -1,0 +1,27 @@
+.gallery {
+    margin: 24px auto;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    row-gap: 24px;
+    flex-wrap: wrap;
+    max-width: 1128px;
+}
+
+.gallery-item {
+    max-width: calc((100% - 2*24px) / 3);
+}
+
+.gallery-link {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.gallery-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
