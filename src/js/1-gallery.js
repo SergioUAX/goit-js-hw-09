@@ -73,10 +73,10 @@ const markup = images
   .map((image) =>
     `<li class="gallery-item">
   <a class="gallery-link" href="${image.original}">
-    <img
-      class="gallery-image"
+    <img      
+      data-source="${image.original}"
       src="${image.preview}"      
-      title="${image.description}"      
+      alt="${image.description}"      
     />
   </a>
 </li>`
@@ -84,6 +84,5 @@ const markup = images
   .join("");
 list.insertAdjacentHTML("afterbegin", markup);
 
-let gallery = new SimpleLightbox('.gallery a', {captions: true, captionDelay: 250});
-
-
+let gallery = new SimpleLightbox('.gallery-item a', {captionsData: 'alt', captionDelay: 250});
+ 
